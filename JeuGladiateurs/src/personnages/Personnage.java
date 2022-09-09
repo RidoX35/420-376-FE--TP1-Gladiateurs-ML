@@ -6,13 +6,13 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
-    // </editor-fold>
     private String nom;
     private int pointsDeVie;
     private int valeurMaxAttaque;
     private int valeurDefense;
-    private int pointsDeVie;
+    private int initiative;
+    // </editor-fold>
+    
     
     
     
@@ -27,7 +27,7 @@ public class Personnage {
         this.pointsDeVie=pvs;
         this.valeurMaxAttaque=attaqueMax;
         this.valeurDefense=defense;
-        this.pointsDeVie=ini;
+        this.initiative=ini;
     }
 
     public Personnage() {
@@ -35,18 +35,59 @@ public class Personnage {
         this.pointsDeVie=0;
         this.valeurMaxAttaque=0;
         this.valeurDefense=0;
-        this.pointsDeVie=0;
+        this.initiative=0;
     }
     // </editor-fold>
+    
 
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
     // TODO : Les getters
-    // TODO : Les setters
-    // </editor-fold>
+    
+    public String getNom() {
+        return nom;
+        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+    }
 
+    public int getPointsDeVie() {
+        return pointsDeVie;
+    }
+
+    public int getValeurMaxAttaque() {
+        return valeurMaxAttaque;
+    }
+
+    public int getValeurDefense() {
+        return valeurDefense;
+    }
+    public int getInitiative() {
+        return initiative;
+    }
+    // TODO : Les setters
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPointsDeVie(int pointsDeVie) {
+        this.pointsDeVie = pointsDeVie;
+    }
+
+    public void setValeurMaxAttaque(int valeurMaxAttaque) {
+        this.valeurMaxAttaque = valeurMaxAttaque;
+    }
+
+    public void setValeurDefense(int valeurDefense) {
+        this.valeurDefense = valeurDefense;
+    }
+
+    public void setInitiative(int initiative) {
+        this.initiative = initiative;
+    }
+    
+    // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
