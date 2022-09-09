@@ -27,9 +27,6 @@ public class JeuGladiateurs {
     
     affichage.afficherDebutCombat();
     
-    tour.afficheTour();
-    tour.augmenteTour();
-    tour.afficheTour();
     // </editor-fold>
 
     // **************************************************************************
