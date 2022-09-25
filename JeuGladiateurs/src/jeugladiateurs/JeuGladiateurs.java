@@ -26,7 +26,8 @@ public class JeuGladiateurs {
     personnage2.afficherInfosPersonnage();
     
     affichage.afficherDebutCombat();
-      
+    
+    
     
     // </editor-fold>
 
