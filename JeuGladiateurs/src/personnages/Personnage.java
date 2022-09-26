@@ -123,6 +123,7 @@ public class Personnage {
         System.out.println(personnageCible.nom+" à une défense de : "+valeurDefense);
         System.out.println("Les dommages sont de : "+dommages);
         System.out.println("");
+        personnageCible.pointsDeVie -= dommages;
         
         
         

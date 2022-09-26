@@ -33,7 +33,7 @@ public class JeuGladiateurs {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
-    // TODO : La boucle contenant les étapes du combat
+    System.out.println(personnage1.getPointsDeVie());
         do {
             tour.afficheTour();
             for (int i = 0; i < 100; i++) {
@@ -52,10 +52,10 @@ public class JeuGladiateurs {
             tour.augmenteTour();
             affichage.afficherSeparateurDeTour();
                     
-        } while (personnage1.getPointsDeVie()<=0 || personnage2.getPointsDeVie()<=0);
+        } while (personnage1.getPointsDeVie()>0 && personnage2.getPointsDeVie()>0);
         
     
-    // TODO : Après la boucle, afficher le résultat du combat
+    affichage.afficheVictoire(personnage1, personnage2);
     // </editor-fold>
     }
 
