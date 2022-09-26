@@ -27,8 +27,6 @@ public class JeuGladiateurs {
     
     affichage.afficherDebutCombat();
     
-    
-    
     // </editor-fold>
 
     // **************************************************************************
@@ -36,6 +34,27 @@ public class JeuGladiateurs {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
     // TODO : La boucle contenant les étapes du combat
+        do {
+            tour.afficheTour();
+            for (int i = 0; i < 100; i++) {
+                if (i==personnage1.getInitiative()) {
+                    personnage1.frapperPersonnage(personnage2);
+                }
+                if (i==personnage2.getInitiative()) {
+                    personnage2.frapperPersonnage(personnage1);
+                }
+            }
+            affichage.afficherSeparateurInfosPerso();
+            personnage1.afficherInfosPersonnage();
+            personnage2.afficherInfosPersonnage();
+            personnage1.setNewInitiativeRandom();
+            personnage2.setNewInitiativeRandom();
+            tour.augmenteTour();
+            affichage.afficherSeparateurDeTour();
+                    
+        } while (personnage1.getPointsDeVie()<=0 || personnage2.getPointsDeVie()<=0);
+        
+    
     // TODO : Après la boucle, afficher le résultat du combat
     // </editor-fold>
     }

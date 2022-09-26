@@ -41,23 +41,23 @@ public class Personnage {
     // TODO : Les getters
     
     public String getNom() {
-        return nom;
+        return this.nom;
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
     }
 
     public int getPointsDeVie() {
-        return pointsDeVie;
+        return this.pointsDeVie;
     }
 
     public int getValeurMaxAttaque() {
-        return valeurMaxAttaque;
+        return this.valeurMaxAttaque;
     }
 
     public int getValeurDefense() {
-        return valeurDefense;
+        return this.valeurDefense;
     }
     public int getInitiative() {
-        return initiative;
+        return this.initiative;
     }
     // TODO : Les setters
 
@@ -94,7 +94,12 @@ public class Personnage {
         System.out.println("Défense : "+ this.valeurDefense);
         System.out.println("Points de vie : "+ this.pointsDeVie);
         System.out.println("Initiative : "+ this.initiative);
-        System.out.println("Statut : ");
+        if (this.pointsDeVie>0) {
+            System.out.println("Statut : Vivant");    
+        }
+        if (this.pointsDeVie<=0) {
+            System.out.println("Statut : Mort");    
+        }
     }
 
     private int attaqueCalcul() {
@@ -126,7 +131,9 @@ public class Personnage {
     }
 
     public void setNewInitiativeRandom() {
-        // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+       int alea = ( int )(Math.random()*(100-0+ 1 )+0);
+       this.initiative = alea;
+       
     }
     // </editor-fold>
     
